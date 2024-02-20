@@ -22,9 +22,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # - name: Build Docker image
-      #   run: docker buildx --load build --tag vladdoster/dotfiles:latest .
-
       - name: Generate release
         run: npx semantic-release --ci --
         env:
